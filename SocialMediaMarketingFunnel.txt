@@ -370,7 +370,7 @@ section { padding: 6rem 2rem; }
   font-weight: 300;
   vertical-align: middle;
 }
-.plan-price .range { font-size: 1.8rem; }
+.plan-price .range { font-size: 3.5rem; }
 .plan-mo {
   font-size: 0.8rem;
   color: var(--muted);
@@ -440,6 +440,20 @@ section { padding: 6rem 2rem; }
   border: none;
   color: var(--white);
 }
+.plan-btn.in-cart {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.plan-btn.grad-btn.in-cart {
+  background: var(--black);
+}
+.pricing-card.premier .plan-btn.in-cart {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+.select-plan, .select-addon { cursor: pointer; }
 
 /* ADD-ONS */
 .addons-section { background: var(--cream); border-top: 1px solid var(--border); }
@@ -697,7 +711,7 @@ footer .grad-text {
           <li><span class="ck"></span> Hashtag optimization</li>
           <li><span class="ck"></span> 2 revisions/month</li>
         </ul>
-        <a href="#claim" class="plan-btn">Get Started</a>
+        <a href="javascript:void(0)" class="plan-btn select-plan" data-plan="Starter" data-price="497">Select Plan</a>
       </div>
       <div class="pricing-card featured">
         <div class="popular">Most Popular</div>
@@ -716,7 +730,7 @@ footer .grad-text {
           <li><span class="ck"></span> Performance report</li>
           <li><span class="ck"></span> 4 revisions/month</li>
         </ul>
-        <a href="#claim" class="plan-btn grad-btn">Get Started</a>
+        <a href="javascript:void(0)" class="plan-btn grad-btn select-plan" data-plan="Growth" data-price="997">Select Plan</a>
       </div>
       <div class="pricing-card">
         <div class="plan-name">Premium</div>
@@ -734,11 +748,11 @@ footer .grad-text {
           <li><span class="ck"></span> Performance report</li>
           <li><span class="ck"></span> 6 revisions/month</li>
         </ul>
-        <a href="#claim" class="plan-btn">Get Started</a>
+        <a href="javascript:void(0)" class="plan-btn select-plan" data-plan="Premium" data-price="1497">Select Plan</a>
       </div>
       <div class="pricing-card elite">
         <div class="plan-name">Elite</div>
-        <div class="plan-price"><sup>$</sup><span class="range">2,500+</span></div>
+        <div class="plan-price"><sup>$</sup>2,500<span style="font-size:1.6rem;">+</span></div>
         <div class="plan-mo">per month</div>
         <div class="plan-desc">Advanced content + performance-driven growth</div>
         <div class="platforms-label">All Platforms</div>
@@ -750,12 +764,13 @@ footer .grad-text {
           <li><span class="ck"></span> Content calendar</li>
           <li><span class="ck"></span> Performance report</li>
           <li><span class="ck"></span> Content optimization</li>
+          <li><span class="ck"></span> Unlimited revisions</li>
         </ul>
-        <a href="#claim" class="plan-btn">Get Started</a>
+        <a href="javascript:void(0)" class="plan-btn select-plan" data-plan="Elite" data-price="2500">Select Plan</a>
       </div>
       <div class="pricing-card premier">
         <div class="plan-name">Premier</div>
-        <div class="plan-price"><sup>$</sup><span class="range">5,000+</span></div>
+        <div class="plan-price"><sup>$</sup>5,000<span style="font-size:1.6rem;">+</span></div>
         <div class="plan-mo">per month</div>
         <div class="plan-desc">Full-service content, production &amp; automation</div>
         <div class="platforms-label">All Platforms</div>
@@ -767,11 +782,12 @@ footer .grad-text {
           <li><span class="ck"></span> AI website assistant</li>
           <li><span class="ck"></span> Lead capture system</li>
           <li><span class="ck"></span> Performance report</li>
+          <li><span class="ck"></span> Unlimited revisions</li>
         </ul>
-        <a href="#claim" class="plan-btn">Get Started</a>
+        <a href="javascript:void(0)" class="plan-btn select-plan" data-plan="Premier" data-price="5000">Select Plan</a>
       </div>
     </div>
-    <p class="revision-note">All plans include monthly revision credits. Starter: 2 • Growth: 4 • Premium: 6 • Additional revisions billed at $50 each. Unused revisions do not roll over.</p>
+    <p class="revision-note">All plans include monthly revision credits. Starter: 2 • Growth: 4 • Premium: 6 • Elite &amp; Premier: Unlimited • Additional revisions billed at $50 each. Unused revisions do not roll over.</p>
   </div>
 </section>
 
@@ -795,7 +811,7 @@ footer .grad-text {
           <li><span class="ck"></span> Weekly monitoring</li>
           <li><span class="ck"></span> Basic performance tracking</li>
         </ul>
-        <a href="#claim" class="plan-btn">Add On</a>
+        <a href="javascript:void(0)" class="plan-btn select-addon" data-addon="Ads Starter" data-price="500">Add On</a>
       </div>
       <div class="addon-card featured">
         <div class="popular">Most Popular</div>
@@ -812,7 +828,7 @@ footer .grad-text {
           <li><span class="ck"></span> Performance tracking + adjustments</li>
           <li><span class="ck"></span> Retargeting setup</li>
         </ul>
-        <a href="#claim" class="plan-btn grad-btn">Add On</a>
+        <a href="javascript:void(0)" class="plan-btn grad-btn select-addon" data-addon="Ads Growth" data-price="800">Add On</a>
       </div>
       <div class="addon-card">
         <div class="addon-name">Ads Pro</div>
@@ -828,7 +844,7 @@ footer .grad-text {
           <li><span class="ck"></span> Ongoing optimization + scaling</li>
           <li><span class="ck"></span> Performance tracking</li>
         </ul>
-        <a href="#claim" class="plan-btn">Add On</a>
+        <a href="javascript:void(0)" class="plan-btn select-addon" data-addon="Ads Pro" data-price="1200">Add On</a>
       </div>
       <div class="addon-card">
         <div class="addon-name">Ads Elite</div>
@@ -844,11 +860,14 @@ footer .grad-text {
           <li><span class="ck"></span> Scaling winning campaigns</li>
           <li><span class="ck"></span> Priority optimization</li>
         </ul>
-        <a href="#claim" class="plan-btn">Add On</a>
+        <a href="javascript:void(0)" class="plan-btn select-addon" data-addon="Ads Elite" data-price="1500">Add On</a>
       </div>
     </div>
     <div class="adspend-note">
       <strong>Important:</strong> Ad spend is separate and paid directly to the advertising platform (Meta, Google, TikTok, etc.). The fees above cover campaign management only.
+    </div>
+    <div style="text-align:center;margin-top:3rem;">
+      <a href="#claim" class="btn-grad" id="cta-claim" style="display:none;">Claim My Free Trial &rarr;</a>
     </div>
   </div>
 </section>
@@ -885,35 +904,48 @@ footer .grad-text {
     <div class="section-title">Claim your 14-day free trial</div>
     <p class="section-sub">Fill out the form below and we'll deliver your first 14 days of content within 24–48 hours. No credit card needed.</p>
     <div class="form-box">
-      <div class="form-row">
-        <div class="fg"><label>First Name</label><input type="text" placeholder="Jane"></div>
-        <div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"></div>
+      <div id="order-summary" style="display:none;background:var(--cream);border:1px solid var(--border);padding:1.25rem 1.5rem;margin-bottom:1.5rem;">
+        <p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Order Summary</p>
+        <div id="summary-plan" style="display:none;display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border);">
+          <div>
+            <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Social Media Package</span><br>
+            <span id="summary-plan-name" style="font-size:0.95rem;font-weight:500;"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span id="summary-plan-price" style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;"></span>
+            <button onclick="removePlan()" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;">&times; Remove</button>
+          </div>
+        </div>
+        <div id="summary-addon" style="display:none;display:flex;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border);">
+          <div>
+            <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Paid Ads Add-On</span><br>
+            <span id="summary-addon-name" style="font-size:0.95rem;font-weight:500;"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span id="summary-addon-price" style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;"></span>
+            <button onclick="removeAddon()" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;">&times; Remove</button>
+          </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding-top:0.75rem;margin-top:0.25rem;border-top:1.5px solid var(--black);">
+          <span style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;">Total</span>
+          <span id="summary-total" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;"></span>
+        </div>
       </div>
-      <div class="fg"><label>Business Name</label><input type="text" placeholder="Your Business Name"></div>
-      <div class="fg"><label>Business Email</label><input type="email" placeholder="jane@yourbusiness.com"></div>
-      <div class="fg"><label>Industry</label><input type="text" placeholder="Enter your industry"></div>
-      <div class="fg"><label>Website URL</label><input type="url" placeholder="https://yourbusiness.com"></div>
-      <div class="fg">
-        <label>Package Interest</label>
-        <select>
-          <option value="">Select a package</option>
-          <optgroup label="Social Media Packages">
-            <option>Starter — $497/month</option>
-            <option>Growth — $997/month</option>
-            <option>Premium — $1,497/month</option>
-            <option>Elite — $2,500–$3,500/month</option>
-            <option>Premier — $5,000–$6,000/month</option>
-          </optgroup>
-          <optgroup label="Paid Ads Add-Ons">
-            <option>Ads Starter — $500/month</option>
-            <option>Ads Growth — $800/month</option>
-            <option>Ads Pro — $1,200/month</option>
-            <option>Ads Elite — $1,500+/month</option>
-          </optgroup>
-        </select>
-      </div>
-      <button class="form-submit">Claim My Free 14 Days</button>
-      <p class="form-note">No credit card required. No contracts. We'll be in touch within 24 hours.</p>
+      <form id="claim-form">
+        <input type="hidden" name="sm_package" id="field-package" value="">
+        <input type="hidden" name="sm_addon" id="field-addon" value="">
+        <input type="hidden" name="sm_monthly_total" id="field-total" value="">
+        <div class="form-row">
+          <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" required></div>
+          <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required></div>
+        </div>
+        <div class="fg"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Business Name" required></div>
+        <div class="fg"><label>Business Email</label><input type="email" name="email" placeholder="john@yourbusiness.com" required></div>
+        <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="Enter your industry"></div>
+        <div class="fg"><label>Website URL</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div>
+        <button type="submit" class="form-submit">Claim My Free 14 Days</button>
+        <p class="form-note">No credit card required. No contracts. We'll be in touch within 24 hours.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -928,6 +960,126 @@ footer .grad-text {
   </div>
   <p>&copy; 2026 <span class="grad-text">BookNexa AI</span> — All rights reserved.</p>
 </footer>
+
+<script>
+let selectedPlan = null;
+let selectedAddon = null;
+
+// Select Plan buttons
+document.querySelectorAll('.select-plan').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const plan = this.dataset.plan;
+    const price = parseInt(this.dataset.price);
+    if (selectedPlan && selectedPlan.name === plan) {
+      removePlan();
+      return;
+    }
+    document.querySelectorAll('.select-plan').forEach(b => {
+      b.classList.remove('in-cart');
+      b.textContent = 'Select Plan';
+    });
+    this.classList.add('in-cart');
+    this.textContent = '✓ Selected';
+    selectedPlan = { name: plan, price: price };
+    updateSummary();
+  });
+});
+
+// Add-On buttons
+document.querySelectorAll('.select-addon').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const addon = this.dataset.addon;
+    const price = parseInt(this.dataset.price);
+    if (selectedAddon && selectedAddon.name === addon) {
+      removeAddon();
+      return;
+    }
+    document.querySelectorAll('.select-addon').forEach(b => {
+      b.classList.remove('in-cart');
+      b.textContent = 'Add On';
+    });
+    this.classList.add('in-cart');
+    this.textContent = '✓ Added';
+    selectedAddon = { name: addon, price: price };
+    updateSummary();
+  });
+});
+
+function removePlan() {
+  selectedPlan = null;
+  document.querySelectorAll('.select-plan').forEach(b => {
+    b.classList.remove('in-cart');
+    b.textContent = 'Select Plan';
+  });
+  updateSummary();
+}
+
+function removeAddon() {
+  selectedAddon = null;
+  document.querySelectorAll('.select-addon').forEach(b => {
+    b.classList.remove('in-cart');
+    b.textContent = 'Add On';
+  });
+  updateSummary();
+}
+
+function updateSummary() {
+  const box = document.getElementById('order-summary');
+  const planRow = document.getElementById('summary-plan');
+  const addonRow = document.getElementById('summary-addon');
+  const cta = document.getElementById('cta-claim');
+
+  if (!selectedPlan && !selectedAddon) {
+    box.style.display = 'none';
+    cta.style.display = 'none';
+    return;
+  }
+  box.style.display = 'block';
+  cta.style.display = 'inline-block';
+
+  if (selectedPlan) {
+    planRow.style.display = 'flex';
+    document.getElementById('summary-plan-name').textContent = selectedPlan.name;
+    document.getElementById('summary-plan-price').textContent = '$' + selectedPlan.price.toLocaleString() + '/mo';
+  } else {
+    planRow.style.display = 'none';
+  }
+
+  if (selectedAddon) {
+    addonRow.style.display = 'flex';
+    document.getElementById('summary-addon-name').textContent = selectedAddon.name;
+    document.getElementById('summary-addon-price').textContent = '$' + selectedAddon.price.toLocaleString() + '/mo';
+  } else {
+    addonRow.style.display = 'none';
+  }
+
+  const total = (selectedPlan ? selectedPlan.price : 0) + (selectedAddon ? selectedAddon.price : 0);
+  document.getElementById('summary-total').textContent = '$' + total.toLocaleString() + '/mo';
+
+  document.getElementById('field-package').value = selectedPlan ? selectedPlan.name + ' — $' + selectedPlan.price + '/month' : '';
+  document.getElementById('field-addon').value = selectedAddon ? selectedAddon.name + ' — $' + selectedAddon.price + '/month' : '';
+  document.getElementById('field-total').value = '$' + total.toLocaleString() + '/month';
+}
+
+// Form submission
+document.getElementById('claim-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  const data = {};
+  new FormData(form).forEach((v, k) => { data[k] = v; });
+
+  // POST to GHL webhook — replace URL below with your GHL webhook
+  fetch('YOUR_GHL_WEBHOOK_URL_HERE', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data)
+  }).then(() => {
+    form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><h3 style="font-family:Cormorant Garamond,serif;font-size:2rem;font-weight:300;margin-bottom:1rem;">Thank you!</h3><p style="color:var(--muted);font-weight:300;">We\'ll be in touch within 24 hours with your custom content plan.</p></div>';
+  }).catch(() => {
+    form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><h3 style="font-family:Cormorant Garamond,serif;font-size:2rem;font-weight:300;margin-bottom:1rem;">Thank you!</h3><p style="color:var(--muted);font-weight:300;">We\'ll be in touch within 24 hours with your custom content plan.</p></div>';
+  });
+});
+</script>
 
 </body>
 </html>

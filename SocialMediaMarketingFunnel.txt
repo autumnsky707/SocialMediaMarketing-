@@ -582,15 +582,45 @@ footer .grad-text {
   background-clip: text;
 }
 
+@media (max-width: 1100px) {
+  .pricing-grid-5 { grid-template-columns: repeat(3, 1fr); }
+}
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
+  .logo { left: -10px; }
+  .logo img { height: 120px; }
+  .nav-cta { margin-right: -10px; font-size: 0.68rem; padding: 0.5rem 1rem; }
   .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
   .hero-photos { display: none; }
+  .hero h1 { font-size: 2.4rem; }
   .trust-bar { padding: 1.25rem 1.5rem; gap: 1.5rem; }
   .how-grid { grid-template-columns: 1fr 1fr; }
+  .pricing-grid-5 { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .addons-grid { grid-template-columns: 1fr 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .form-box { padding: 2rem 1.5rem; }
+  section { padding: 4rem 1.5rem; }
+  .trial-section { padding: 3rem 1.5rem; }
+}
+@media (max-width: 600px) {
+  nav { padding: 0.75rem 1rem; align-items: center; }
+  .logo { top: 0; left: -5px; }
+  .logo img { height: 80px; }
+  .nav-cta { top: 0; margin-right: 0; font-size: 0.62rem; padding: 0.45rem 0.8rem; }
+  .hero { padding: 2.5rem 1.25rem; gap: 1.5rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero-sub { font-size: 0.9rem; }
+  .trust-bar { flex-direction: column; gap: 0.75rem; padding: 1.25rem; }
+  .how-grid { grid-template-columns: 1fr; }
+  .pricing-grid-5 { grid-template-columns: 1fr; }
+  .pricing-card { padding: 2rem 1.5rem; }
+  .addons-grid { grid-template-columns: 1fr; }
+  .addon-card { padding: 1.5rem; }
+  section { padding: 3rem 1.25rem; }
+  .section-title { font-size: 1.6rem; }
+  .trial-section { padding: 2.5rem 1.25rem; }
+  .form-box { padding: 1.5rem 1rem; }
+  .btn-grad { padding: 0.9rem 2rem; font-size: 0.76rem; }
 }
 </style>
 </head>
@@ -709,7 +739,7 @@ footer .grad-text {
           <li><span class="ck"></span> Branded visuals</li>
           <li><span class="ck"></span> Scheduling &amp; publishing</li>
           <li><span class="ck"></span> Hashtag optimization</li>
-          <li><span class="ck"></span> 2 revisions/month</li>
+          <li><span class="ck"></span> 2 revisions</li>
         </ul>
         <a href="javascript:void(0)" class="plan-btn select-plan" data-plan="Starter" data-price="497">Select Plan</a>
       </div>
@@ -728,7 +758,7 @@ footer .grad-text {
           <li><span class="ck"></span> Light engagement</li>
           <li><span class="ck"></span> Content calendar</li>
           <li><span class="ck"></span> Performance report</li>
-          <li><span class="ck"></span> 4 revisions/month</li>
+          <li><span class="ck"></span> 4 revisions</li>
         </ul>
         <a href="javascript:void(0)" class="plan-btn grad-btn select-plan" data-plan="Growth" data-price="997">Select Plan</a>
       </div>
@@ -746,7 +776,7 @@ footer .grad-text {
           <li><span class="ck"></span> Profile optimization</li>
           <li><span class="ck"></span> Content direction</li>
           <li><span class="ck"></span> Performance report</li>
-          <li><span class="ck"></span> 6 revisions/month</li>
+          <li><span class="ck"></span> 6 revisions</li>
         </ul>
         <a href="javascript:void(0)" class="plan-btn select-plan" data-plan="Premium" data-price="1497">Select Plan</a>
       </div>

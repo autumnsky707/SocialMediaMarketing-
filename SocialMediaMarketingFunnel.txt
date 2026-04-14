@@ -897,11 +897,19 @@ footer .grad-text {
         <label>Package Interest</label>
         <select>
           <option value="">Select a package</option>
-          <option>Starter — $497/month</option>
-          <option>Growth — $997/month</option>
-          <option>Premium — $1,497/month</option>
-          <option>Elite — $2,500–$3,500/month</option>
-          <option>Premier — $5,000–$6,000/month</option>
+          <optgroup label="Social Media Packages">
+            <option>Starter — $497/month</option>
+            <option>Growth — $997/month</option>
+            <option>Premium — $1,497/month</option>
+            <option>Elite — $2,500–$3,500/month</option>
+            <option>Premier — $5,000–$6,000/month</option>
+          </optgroup>
+          <optgroup label="Paid Ads Add-Ons">
+            <option>Ads Starter — $500/month</option>
+            <option>Ads Growth — $800/month</option>
+            <option>Ads Pro — $1,200/month</option>
+            <option>Ads Elite — $1,500+/month</option>
+          </optgroup>
         </select>
       </div>
       <button class="form-submit">Claim My Free 14 Days</button>

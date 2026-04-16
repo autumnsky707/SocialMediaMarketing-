@@ -1107,14 +1107,15 @@ function updateSummary() {
 document.getElementById('claim-form').addEventListener('submit', function(e) {
   e.preventDefault();
   const form = this;
-  const data = {};
-  new FormData(form).forEach((v, k) => { data[k] = v; });
+  const formData = new FormData(form);
+  const params = new URLSearchParams();
+  formData.forEach((v, k) => { params.append(k, v); });
 
-  // POST to GHL webhook — replace URL below with your GHL webhook
   fetch('https://services.leadconnectorhq.com/hooks/NNFCwckEhjBk90UtMRSp/webhook-trigger/gN2YSzrjdjuCyiG7XDsl', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(data)
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: params.toString(),
+    mode: 'no-cors'
   }).then(() => {
     form.innerHTML = '<div style="text-align:center;padding:3rem 0;"><h3 style="font-family:Cormorant Garamond,serif;font-size:2rem;font-weight:300;margin-bottom:1rem;">Thank you!</h3><p style="color:var(--muted);font-weight:300;">We\'ll be in touch within 24 hours with your custom content plan.</p></div>';
   }).catch(() => {

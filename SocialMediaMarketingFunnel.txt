@@ -967,9 +967,9 @@ footer .grad-text {
         </div>
       </div>
       <form id="claim-form">
-        <input type="hidden" name="sm_package" id="field-package" value="">
-        <input type="hidden" name="sm_addon" id="field-addon" value="">
-        <input type="hidden" name="sm_monthly_total" id="field-total" value="">
+        <input type="hidden" name="social_media_package" id="field-package" value="">
+        <input type="hidden" name="paid_ads_addon" id="field-addon" value="">
+        <input type="hidden" name="total_monthly" id="field-total" value="">
         <div class="form-row">
           <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" required></div>
           <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required></div>
@@ -1111,7 +1111,7 @@ document.getElementById('claim-form').addEventListener('submit', function(e) {
   new FormData(form).forEach((v, k) => { data[k] = v; });
 
   // POST to GHL webhook — replace URL below with your GHL webhook
-  fetch('YOUR_GHL_WEBHOOK_URL_HERE', {
+  fetch('https://services.leadconnectorhq.com/hooks/NNFCwckEhjBk90UtMRSp/webhook-trigger/gN2YSzrjdjuCyiG7XDsl', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)

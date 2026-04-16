@@ -365,10 +365,12 @@ section { padding: 6rem 2rem; }
   margin-bottom: 0.2rem;
 }
 .plan-price sup {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
-  vertical-align: middle;
+  vertical-align: super;
+  position: relative;
+  top: 0.15em;
 }
 .plan-price .range { font-size: 3.5rem; }
 .plan-mo {
@@ -974,6 +976,7 @@ footer .grad-text {
         </div>
         <div class="fg"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Business Name" required></div>
         <div class="fg"><label>Business Email</label><input type="email" name="email" placeholder="john@yourbusiness.com" required></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 123-4567" required></div>
         <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="Enter your industry"></div>
         <div class="fg"><label>Website URL</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div>
         <button type="submit" class="form-submit">Claim My Free Content</button>

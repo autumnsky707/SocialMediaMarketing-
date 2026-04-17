@@ -945,6 +945,9 @@ footer .grad-text {
     <div class="adspend-note">
       <strong>Important:</strong> Ad spend is separate and paid directly to the advertising platform (Meta, Google, TikTok, etc.). The fees above cover campaign management only.
     </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="#claim" class="btn-grad" id="cta-claim" style="display:none;">Claim My Free Content &rarr;</a>
+    </div>
   </div>
 </section>
 
@@ -1003,11 +1006,6 @@ footer .grad-text {
     </div>
   </div>
 </section>
-
-<!-- CTA -->
-<div style="text-align:center;padding:3rem 2rem;">
-  <a href="#claim" class="btn-grad" id="cta-claim" style="display:none;">Claim My Free Content &rarr;</a>
-</div>
 
 <!-- PORTFOLIO -->
 <section style="background:var(--cream);border-top:1px solid var(--border);">

@@ -1194,6 +1194,40 @@ function updateSummary() {
   document.getElementById('field-total').value = '$' + total.toLocaleString() + '/month';
 }
 
+// Phone number auto-formatting (US by default, international when starting with +)
+(function() {
+  const phoneInput = document.querySelector('#claim-form input[name="phone"]');
+  if (!phoneInput) return;
+
+  function formatPhone(value) {
+    const hasPlus = value.trim().startsWith('+');
+    const digits = value.replace(/\D/g, '');
+
+    if (hasPlus) {
+      if (digits.length === 0) return '+';
+      const ccLen = digits.length > 11 ? 3 : (digits.length > 10 ? 2 : 1);
+      const cc = digits.slice(0, ccLen);
+      const rest = digits.slice(ccLen);
+      let out = '+' + cc;
+      for (let i = 0; i < rest.length; i += 3) {
+        out += ' ' + rest.slice(i, i + 3);
+      }
+      return out;
+    }
+
+    const d = digits.slice(0, 10);
+    if (d.length === 0) return '';
+    if (d.length < 4) return '(' + d;
+    if (d.length < 7) return '(' + d.slice(0, 3) + ') ' + d.slice(3);
+    return '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6, 10);
+  }
+
+  phoneInput.addEventListener('input', function(e) {
+    const formatted = formatPhone(e.target.value);
+    if (formatted !== e.target.value) e.target.value = formatted;
+  });
+})();
+
 // Form submission
 document.getElementById('claim-form').addEventListener('submit', function(e) {
   e.preventDefault();

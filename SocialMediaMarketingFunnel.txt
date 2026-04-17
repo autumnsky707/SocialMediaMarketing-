@@ -741,44 +741,26 @@ footer .grad-text {
     <div class="how-grid">
       <div class="how-step">
         <div class="step-num">01</div>
-        <h3>Claim Your Trial</h3>
-        <p>Fill out our quick form and we get to work creating 14 days of custom content for your business — completely free.</p>
+        <h3>We Create Your Content</h3>
+        <p>We create your first 14 days of content — delivered within 24–48 hours.</p>
       </div>
       <div class="how-step">
         <div class="step-num">02</div>
-        <h3>We Create Your Content</h3>
-        <p>Our team crafts 14 days of professional posts tailored to your brand voice, industry, and target audience.</p>
+        <h3>Review & Approve</h3>
+        <p>You review and approve your content. Up to 2 rounds of revisions included.</p>
       </div>
       <div class="how-step">
         <div class="step-num">03</div>
-        <h3>Review & Approve</h3>
-        <p>You receive a preview of your complete content calendar. Review everything before anything goes live.</p>
+        <h3>Payment Link</h3>
+        <p>We send you a simple payment link. No surprises — you decide when you're ready.</p>
       </div>
       <div class="how-step">
         <div class="step-num">04</div>
         <h3>We Go Live</h3>
-        <p>We send you a secure link to connect your accounts. Once connected, we handle all scheduling and publishing from there.</p>
+        <p>Your subscription begins — fully automated. Cancel anytime, no contracts.</p>
       </div>
 
 </div>
-  </div>
-</section>
-
-<!-- REVISION POLICY -->
-<section id="revision-policy">
-  <div class="container">
-    <div class="rev-box">
-      <div class="rev-eyebrow">Revision Policy</div>
-      <h3 class="rev-title">Fair &amp; Simple</h3>
-      <p class="rev-intro">We want you to love your content. Here's how revisions work:</p>
-      <ul class="rev-list">
-        <li>2 rounds of revisions included on your initial 14-day content batch</li>
-        <li>Please submit all revision notes at once in a single request — this helps us turn revisions around faster</li>
-        <li>Additional revision rounds beyond the first two are $75 each</li>
-        <li>Revisions must be requested within 7 days of content delivery</li>
-      </ul>
-      <p class="rev-agree">By claiming your free content, you agree to these revision terms.</p>
-    </div>
   </div>
 </section>
 
@@ -1032,13 +1014,6 @@ footer .grad-text {
         <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 123-4567" required></div>
         <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="Enter your industry"></div>
         <div class="fg"><label>Website URL</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div>
-        <div class="rev-check">
-          <label>
-            <input type="checkbox" id="agree-revision-policy" name="revision_agree" required>
-            <span>I have read and agree to the <a href="#revision-policy" id="rev-policy-link">revision policy</a> and terms.</span>
-          </label>
-          <p class="rev-error" id="rev-error">Please agree to the revision policy and terms before continuing.</p>
-        </div>
         <button type="submit" class="form-submit">Claim My Free Content</button>
         <p class="form-note">No credit card. No contracts. We deliver your content within 24–48 hours.</p>
       </form>
@@ -1099,7 +1074,7 @@ footer .grad-text {
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is your revision policy?<span class="faq-icon">+</span></button>
-        <div class="faq-a"><p>Every package includes 2 rounds of revisions on your initial 14-day content batch. We ask that you submit all your revision notes at once in a single request — this helps us turn your revisions around faster and keeps the process smooth for both of us. Additional revision rounds beyond the first two are $75 each, and all revisions must be requested within 7 days of receiving your content. By claiming your free content, you agree to these terms.</p></div>
+        <div class="faq-a"><p>Every package includes a set number of revisions on your initial 14-day content batch — check your package details for the exact amount. We ask that you submit all revision notes at once in a single request so we can turn them around faster.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I cancel anytime?<span class="faq-icon">+</span></button>
@@ -1290,18 +1265,6 @@ function updateSummary() {
   });
 })();
 
-// Revision policy link smooth scroll
-(function() {
-  const link = document.getElementById('rev-policy-link');
-  if (!link) return;
-  link.addEventListener('click', function(e) {
-    const target = document.getElementById('revision-policy');
-    if (!target) return;
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-})();
-
 // Form submission
 document.getElementById('claim-form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -1312,14 +1275,6 @@ document.getElementById('claim-form').addEventListener('submit', function(e) {
     return;
   }
   errEl.style.display = 'none';
-  const agreeBox = document.getElementById('agree-revision-policy');
-  const agreeErr = document.getElementById('rev-error');
-  if (agreeBox && !agreeBox.checked) {
-    if (agreeErr) agreeErr.style.display = 'block';
-    agreeBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    return;
-  }
-  if (agreeErr) agreeErr.style.display = 'none';
   const form = this;
   const formData = new FormData(form);
   const params = new URLSearchParams();

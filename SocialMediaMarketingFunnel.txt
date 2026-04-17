@@ -567,6 +567,20 @@ section { padding: 6rem 2rem; }
 }
 .form-note { font-size: 0.76rem; color: var(--muted); margin-top: 1rem; text-align: center; font-weight: 300; }
 .revision-note { text-align: center; font-size: 0.78rem; color: var(--muted); margin-top: 2rem; font-weight: 300; font-style: italic; }
+.rev-box { background: #faf9ff; border-left: 2px solid #7c3aed; padding: 2rem 2.25rem; margin-top: 2.5rem; border-radius: 2px; }
+.rev-eyebrow { color: #7c3aed; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.75rem; }
+.rev-title { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 300; margin: 0 0 1.25rem; line-height: 1.2; }
+.rev-intro { font-size: 0.98rem; line-height: 1.6; font-weight: 300; margin: 0 0 1.25rem; color: var(--black); }
+.rev-list { list-style: none; padding: 0; margin: 0 0 1.5rem; }
+.rev-list li { position: relative; padding-left: 1.4rem; margin-bottom: 0.7rem; font-size: 0.95rem; line-height: 1.6; font-weight: 300; }
+.rev-list li::before { content: ""; position: absolute; left: 0; top: 0.65rem; width: 7px; height: 7px; border-radius: 50%; background: #7c3aed; }
+.rev-agree { font-size: 0.88rem; color: var(--muted); font-style: italic; font-weight: 300; border-top: 1px solid rgba(124, 58, 237, 0.18); padding-top: 1rem; margin: 0; }
+.rev-check { margin: 1.25rem 0 1rem; }
+.rev-check label { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.85rem; font-weight: 300; line-height: 1.5; cursor: pointer; }
+.rev-check input[type="checkbox"] { accent-color: #7c3aed; margin-top: 0.25rem; flex-shrink: 0; width: 16px; height: 16px; }
+.rev-check a { color: #7c3aed; text-decoration: underline; }
+.rev-error { color: #ef4444; font-size: 0.82rem; margin-top: 0.5rem; display: none; font-weight: 500; }
+@media (max-width: 600px) { .rev-box { padding: 1.5rem 1.25rem; } .rev-title { font-size: 1.55rem; } }
 
 /* FOOTER */
 footer {
@@ -745,8 +759,26 @@ footer .grad-text {
         <h3>We Go Live</h3>
         <p>We send you a secure link to connect your accounts. Once connected, we handle all scheduling and publishing from there.</p>
       </div>
-    
+
 </div>
+  </div>
+</section>
+
+<!-- REVISION POLICY -->
+<section id="revision-policy">
+  <div class="container">
+    <div class="rev-box">
+      <div class="rev-eyebrow">Revision Policy</div>
+      <h3 class="rev-title">Fair &amp; Simple</h3>
+      <p class="rev-intro">We want you to love your content. Here's how revisions work:</p>
+      <ul class="rev-list">
+        <li>2 rounds of revisions included on your initial 14-day content batch</li>
+        <li>Please submit all revision notes at once in a single request — this helps us turn revisions around faster</li>
+        <li>Additional revision rounds beyond the first two are $75 each</li>
+        <li>Revisions must be requested within 7 days of content delivery</li>
+      </ul>
+      <p class="rev-agree">By claiming your free content, you agree to these revision terms.</p>
+    </div>
   </div>
 </section>
 
@@ -1000,6 +1032,13 @@ footer .grad-text {
         <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 123-4567" required></div>
         <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="Enter your industry"></div>
         <div class="fg"><label>Website URL</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div>
+        <div class="rev-check">
+          <label>
+            <input type="checkbox" id="agree-revision-policy" name="revision_agree" required>
+            <span>I have read and agree to the <a href="#revision-policy" id="rev-policy-link">revision policy</a> and terms.</span>
+          </label>
+          <p class="rev-error" id="rev-error">Please agree to the revision policy and terms before continuing.</p>
+        </div>
         <button type="submit" class="form-submit">Claim My Free Content</button>
         <p class="form-note">No credit card. No contracts. We deliver your content within 24–48 hours.</p>
       </form>
@@ -1057,6 +1096,10 @@ footer .grad-text {
       <div class="faq-item">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What happens after the 14 days?<span class="faq-icon">+</span></button>
         <div class="faq-a"><p>After you review and approve your free content, we'll send you a simple payment link to continue your selected plan. No surprises, no pressure — you decide if it's the right fit.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is your revision policy?<span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Every package includes 2 rounds of revisions on your initial 14-day content batch. We ask that you submit all your revision notes at once in a single request — this helps us turn your revisions around faster and keeps the process smooth for both of us. Additional revision rounds beyond the first two are $75 each, and all revisions must be requested within 7 days of receiving your content. By claiming your free content, you agree to these terms.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I cancel anytime?<span class="faq-icon">+</span></button>
@@ -1247,6 +1290,18 @@ function updateSummary() {
   });
 })();
 
+// Revision policy link smooth scroll
+(function() {
+  const link = document.getElementById('rev-policy-link');
+  if (!link) return;
+  link.addEventListener('click', function(e) {
+    const target = document.getElementById('revision-policy');
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+
 // Form submission
 document.getElementById('claim-form').addEventListener('submit', function(e) {
   e.preventDefault();
@@ -1257,6 +1312,14 @@ document.getElementById('claim-form').addEventListener('submit', function(e) {
     return;
   }
   errEl.style.display = 'none';
+  const agreeBox = document.getElementById('agree-revision-policy');
+  const agreeErr = document.getElementById('rev-error');
+  if (agreeBox && !agreeBox.checked) {
+    if (agreeErr) agreeErr.style.display = 'block';
+    agreeBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+  if (agreeErr) agreeErr.style.display = 'none';
   const form = this;
   const formData = new FormData(form);
   const params = new URLSearchParams();

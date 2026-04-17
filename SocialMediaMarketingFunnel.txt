@@ -741,23 +741,23 @@ footer .grad-text {
     <div class="how-grid">
       <div class="how-step">
         <div class="step-num">01</div>
-        <h3>We create your first 14 days of content</h3>
-        <p>Delivered within 24–48 hours</p>
+        <h3>WE CREATE YOUR CONTENT</h3>
+        <p>Our team gets to work immediately after you claim your trial. You'll receive your first 14 days of done-for-you social media content — custom-crafted for your brand, voice, and audience — within 24–48 hours.</p>
       </div>
       <div class="how-step">
         <div class="step-num">02</div>
-        <h3>You review and approve your content</h3>
-        <p>Up to 2 rounds of revisions included</p>
+        <h3>REVIEW &amp; APPROVE</h3>
+        <p>We deliver everything to a private folder so you can review at your own pace. Love it? Approve it. Want tweaks? You get up to 2 rounds of revisions included to make sure it feels just right.</p>
       </div>
       <div class="how-step">
         <div class="step-num">03</div>
-        <h3>We send you a simple payment link</h3>
-        <p>No surprises — you decide when you're ready</p>
+        <h3>SIMPLE PAYMENT LINK</h3>
+        <p>Once you're happy with your content, we'll send you a secure payment link to activate your subscription. No pressure, no surprises — you decide when you're ready to go live.</p>
       </div>
       <div class="how-step">
         <div class="step-num">04</div>
-        <h3>Your subscription begins — fully automated</h3>
-        <p>Cancel anytime, no contracts</p>
+        <h3>WE GO LIVE</h3>
+        <p>Once payment is complete, your subscription begins and we handle everything — scheduling, posting, and ongoing content creation — so your brand stays active and growing. Cancel anytime, no contracts.</p>
       </div>
 
 </div>

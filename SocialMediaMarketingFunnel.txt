@@ -607,7 +607,12 @@ footer .grad-text {
   .logo img { height: 120px; }
   .nav-cta { margin-right: -10px; font-size: 0.68rem; padding: 0.5rem 1rem; }
   .hero { grid-template-columns: 1fr; padding: 4rem 1.5rem; }
-  .hero-photos { display: none; }
+  .hero-left { display: contents; }
+  .hero-eyebrow { order: 1; }
+  .hero h1 { order: 2; }
+  .hero-sub { order: 3; margin-bottom: 1.5rem; }
+  .hero-photos { order: 4; margin-bottom: 2rem; }
+  .hero-actions { order: 5; }
   .hero h1 { font-size: 2.4rem; }
   .trust-bar { padding: 1.25rem 1.5rem; gap: 1.5rem; }
   .how-grid { grid-template-columns: 1fr 1fr; }
@@ -704,7 +709,6 @@ footer .grad-text {
       <p class="hero-sub">We create and schedule professional social media content for your business every single day — so you can focus on what you do best.</p>
       <div class="hero-actions">
         <a href="#claim" class="btn-primary">Claim My Free Content</a>
-        <a href="#pricing" class="btn-secondary">View Packages</a>
       </div>
     </div>
     <div class="hero-photos">

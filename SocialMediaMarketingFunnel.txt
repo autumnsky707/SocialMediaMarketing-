@@ -741,23 +741,23 @@ footer .grad-text {
     <div class="how-grid">
       <div class="how-step">
         <div class="step-num">01</div>
-        <h3>We Create Your Content</h3>
-        <p>We create your first 14 days of content — delivered within 24–48 hours.</p>
+        <h3>We create your first 14 days of content</h3>
+        <p>Delivered within 24–48 hours</p>
       </div>
       <div class="how-step">
         <div class="step-num">02</div>
-        <h3>Review & Approve</h3>
-        <p>You review and approve your content. Up to 2 rounds of revisions included.</p>
+        <h3>You review and approve your content</h3>
+        <p>Up to 2 rounds of revisions included</p>
       </div>
       <div class="how-step">
         <div class="step-num">03</div>
-        <h3>Payment Link</h3>
-        <p>We send you a simple payment link. No surprises — you decide when you're ready.</p>
+        <h3>We send you a simple payment link</h3>
+        <p>No surprises — you decide when you're ready</p>
       </div>
       <div class="how-step">
         <div class="step-num">04</div>
-        <h3>We Go Live</h3>
-        <p>Your subscription begins — fully automated. Cancel anytime, no contracts.</p>
+        <h3>Your subscription begins — fully automated</h3>
+        <p>Cancel anytime, no contracts</p>
       </div>
 
 </div>

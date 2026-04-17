@@ -948,6 +948,62 @@ footer .grad-text {
   </div>
 </section>
 
+<!-- CLAIM FORM -->
+<section class="form-section" id="claim">
+  <div class="container">
+    <div class="section-eyebrow">Get Started</div>
+    <div class="section-title">Get 14 days of done-for-you social media content — free</div>
+    <p class="section-sub">Fill out the form below and we'll deliver your first 14 days of content within 24–48 hours.</p>
+    <div class="form-box">
+      <div id="order-summary" style="background:var(--cream);border:1px solid var(--border);padding:1.25rem 1.5rem;margin-bottom:1.5rem;">
+        <p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Order Summary</p>
+        <p id="summary-empty" style="font-size:0.88rem;color:var(--muted);font-weight:300;font-style:italic;padding:0.5rem 0;">Please select a plan above</p>
+        <div id="summary-plan" style="display:none;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border);">
+          <div>
+            <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Social Media Package</span><br>
+            <span id="summary-plan-name" style="font-size:0.95rem;font-weight:500;"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span id="summary-plan-price" style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;"></span>
+            <button onclick="removePlan()" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;">&times; Remove</button>
+          </div>
+        </div>
+        <div id="summary-addon" style="display:none;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border);">
+          <div>
+            <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Paid Ads Add-On</span><br>
+            <span id="summary-addon-name" style="font-size:0.95rem;font-weight:500;"></span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <span id="summary-addon-price" style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;"></span>
+            <button onclick="removeAddon()" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;">&times; Remove</button>
+          </div>
+        </div>
+        <div id="summary-total-row" style="display:none;justify-content:space-between;padding-top:0.75rem;margin-top:0.25rem;border-top:1.5px solid var(--black);">
+          <span style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;">Total</span>
+          <span id="summary-total" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;"></span>
+        </div>
+      </div>
+      <p id="plan-error" style="display:none;color:#ef4444;font-size:0.85rem;font-weight:500;margin-bottom:1rem;text-align:center;">Please select a plan above</p>
+      <form id="claim-form">
+        <input type="hidden" name="social_media_package" id="field-package" value="">
+        <input type="hidden" name="paid_ads_addon" id="field-addon" value="">
+        <input type="hidden" name="total_monthly" id="field-total" value="">
+        <div class="form-row">
+          <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" required></div>
+          <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required></div>
+        </div>
+        <div class="fg"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Business Name" required></div>
+        <div class="fg"><label>Business Email</label><input type="email" name="email" placeholder="john@yourbusiness.com" required></div>
+        <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 123-4567" required></div>
+        <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="Enter your industry"></div>
+        <div class="fg"><label>Website URL</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div>
+        <button type="submit" class="form-submit">Claim My Free Content</button>
+        <p class="form-note">No credit card. No contracts. We deliver your content within 24–48 hours.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <div style="text-align:center;padding:3rem 2rem;">
   <a href="#claim" class="btn-grad" id="cta-claim" style="display:none;">Claim My Free Content &rarr;</a>
@@ -1020,62 +1076,6 @@ footer .grad-text {
   </div>
 </section>
 
-<!-- CLAIM FORM -->
-<section class="form-section" id="claim">
-  <div class="container">
-    <div class="section-eyebrow">Get Started</div>
-    <div class="section-title">Get 14 days of done-for-you social media content — free</div>
-    <p class="section-sub">Fill out the form below and we'll deliver your first 14 days of content within 24–48 hours.</p>
-    <div class="form-box">
-      <div id="order-summary" style="background:var(--cream);border:1px solid var(--border);padding:1.25rem 1.5rem;margin-bottom:1.5rem;">
-        <p style="font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Order Summary</p>
-        <p id="summary-empty" style="font-size:0.88rem;color:var(--muted);font-weight:300;font-style:italic;padding:0.5rem 0;">Please select a plan above</p>
-        <div id="summary-plan" style="display:none;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border);">
-          <div>
-            <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Social Media Package</span><br>
-            <span id="summary-plan-name" style="font-size:0.95rem;font-weight:500;"></span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.75rem;">
-            <span id="summary-plan-price" style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;"></span>
-            <button onclick="removePlan()" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;">&times; Remove</button>
-          </div>
-        </div>
-        <div id="summary-addon" style="display:none;justify-content:space-between;align-items:center;padding:0.6rem 0;border-bottom:1px solid var(--border);">
-          <div>
-            <span style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Paid Ads Add-On</span><br>
-            <span id="summary-addon-name" style="font-size:0.95rem;font-weight:500;"></span>
-          </div>
-          <div style="display:flex;align-items:center;gap:0.75rem;">
-            <span id="summary-addon-price" style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;"></span>
-            <button onclick="removeAddon()" style="background:none;border:none;color:#ef4444;cursor:pointer;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;">&times; Remove</button>
-          </div>
-        </div>
-        <div id="summary-total-row" style="display:none;justify-content:space-between;padding-top:0.75rem;margin-top:0.25rem;border-top:1.5px solid var(--black);">
-          <span style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;font-weight:500;">Total</span>
-          <span id="summary-total" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;"></span>
-        </div>
-      </div>
-      <p id="plan-error" style="display:none;color:#ef4444;font-size:0.85rem;font-weight:500;margin-bottom:1rem;text-align:center;">Please select a plan above</p>
-      <form id="claim-form">
-        <input type="hidden" name="social_media_package" id="field-package" value="">
-        <input type="hidden" name="paid_ads_addon" id="field-addon" value="">
-        <input type="hidden" name="total_monthly" id="field-total" value="">
-        <div class="form-row">
-          <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="John" required></div>
-          <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required></div>
-        </div>
-        <div class="fg"><label>Business Name</label><input type="text" name="business_name" placeholder="Your Business Name" required></div>
-        <div class="fg"><label>Business Email</label><input type="email" name="email" placeholder="john@yourbusiness.com" required></div>
-        <div class="fg"><label>Phone Number</label><input type="tel" name="phone" placeholder="(555) 123-4567" required></div>
-        <div class="fg"><label>Industry</label><input type="text" name="industry" placeholder="Enter your industry"></div>
-        <div class="fg"><label>Website URL</label><input type="url" name="website" placeholder="https://yourbusiness.com"></div>
-        <button type="submit" class="form-submit">Claim My Free Content</button>
-        <p class="form-note">No credit card. No contracts. We deliver your content within 24–48 hours.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer>
   <div style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:1.5rem;">
@@ -1109,6 +1109,8 @@ document.querySelectorAll('.select-plan').forEach(btn => {
     selectedPlan = { name: plan, price: price };
     document.getElementById('plan-error').style.display = 'none';
     updateSummary();
+    const addonsSection = document.querySelector('.addons-section');
+    if (addonsSection) addonsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 
@@ -1225,6 +1227,25 @@ function updateSummary() {
   phoneInput.addEventListener('input', function(e) {
     const formatted = formatPhone(e.target.value);
     if (formatted !== e.target.value) e.target.value = formatted;
+  });
+})();
+
+// Website URL auto-prefix https://
+(function() {
+  const websiteInput = document.querySelector('#claim-form input[name="website"]');
+  if (!websiteInput) return;
+  const PREFIX = 'https://';
+  websiteInput.addEventListener('input', function(e) {
+    const v = e.target.value;
+    if (v.length === 0) return;
+    if (/^https?:\/\//i.test(v)) return;
+    e.target.value = PREFIX + v.replace(/^\/+/, '');
+  });
+  websiteInput.addEventListener('focus', function(e) {
+    if (e.target.value === '') e.target.value = PREFIX;
+  });
+  websiteInput.addEventListener('blur', function(e) {
+    if (e.target.value === PREFIX) e.target.value = '';
   });
 })();
 

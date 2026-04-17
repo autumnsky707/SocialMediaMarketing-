@@ -770,7 +770,7 @@ footer .grad-text {
     <div class="pricing-intro">
       <div class="section-eyebrow">Pricing</div>
       <div class="section-title">Simple, transparent packages</div>
-      <p class="section-sub">Choose the plan that fits your business. No long-term contracts — upgrade or cancel anytime.</p>
+      <p class="section-sub">Choose the plan that fits your business. No credit card required or long-term contracts — upgrade or cancel anytime.</p>
     </div>
     <div class="pricing-grid-5">
       <div class="pricing-card">
